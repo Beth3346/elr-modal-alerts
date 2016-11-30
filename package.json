@@ -1,0 +1,28 @@
+{
+  "name": "elr-modal-alerts",
+  "version": "1.0.0",
+  "description": "modal alerts",
+  "main": "dist/elr-modal-alerts.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beth3346/elr-modal-alerts.git"
+  },
+  "scripts": {
+    "build": "build"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.0.0",
+    "elr-utility-lib": "^1.0.5",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sourcemaps": "^2.1.1",
+    "jshint": "^2.9.3"
+  }
+}
