@@ -1,7 +1,7 @@
-import elrUtlities from 'elr-utility-lib';
+import elrUI from 'elr-ui';
 const $ = require('jquery');
 
-let elr = elrUtlities();
+let ui = elrUI();
 
 const elrModalAlert = function({
     alertClass = 'elr-modal-alert',
@@ -9,8 +9,8 @@ const elrModalAlert = function({
 } = {}) {
     const self = {
         addButtons(buttons, $el) {
-            elr.each(buttons, function() {
-                const $button = elr.createElement('button', {
+            ui.each(buttons, function() {
+                const $button = ui.createElement('button', {
                     class: this.class,
                     text: this.text
                 }).appendTo($el);
@@ -47,30 +47,30 @@ const elrModalAlert = function({
                 iconClass = 'fa fa-info';
             }
 
-            const $newAlert = elr.createElement('div', {
+            const $newAlert = ui.createElement('div', {
                 class: className
             });
 
-            const $alertHeader = elr.createElement('div', {
+            const $alertHeader = ui.createElement('div', {
                 html: `<p class="elr-modal-alert-heading"><i class="${iconClass}"></i> ${title}</p>`,
                 class: 'elr-header'
             });
 
-            const $alertBody = elr.createElement('div', {
+            const $alertBody = ui.createElement('div', {
                 html: `<p>${text}</p>`,
                 class: 'elr-body'
             });
 
-            const $alertFooter = elr.createElement('div', {
+            const $alertFooter = ui.createElement('div', {
                 class: 'elr-footer'
             });
 
-            const $close = elr.createElement('button', {
+            const $close = ui.createElement('button', {
                 text: 'x',
                 class: 'close'
             });
 
-            const $lightbox = elr.createElement('div', {
+            const $lightbox = ui.createElement('div', {
                 class: 'elr-blackout'
             });
 
@@ -93,8 +93,8 @@ const elrModalAlert = function({
                     $('.elr-blackout').on('click', function() {
                         $(this).find($(`.${alertClass}`))
                                .fadeOut(speed, function() {
-                            elr.clearElement($('.elr-blackout'), 100);
-                            elr.clearElement($(this), 0);
+                            ui.clearElement($('.elr-blackout'), 100);
+                            ui.clearElement($(this), 0);
                         });
                     });
 
@@ -107,8 +107,8 @@ const elrModalAlert = function({
 
         clearAlert(speed = speed, cb = null) {
             $(this).closest(`.${alertClass}`).fadeOut(speed, function() {
-                elr.clearElement($('.elr-blackout'), 100);
-                elr.clearElement($(this), 0);
+                ui.clearElement($('.elr-blackout'), 100);
+                ui.clearElement($(this), 0);
 
                 if (cb) {
                     cb();

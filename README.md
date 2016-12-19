@@ -1,4 +1,9 @@
-# elr-modal-alerts 
+# elr-modal-alerts
+
+[![Build Status](https://travis-ci.org/Beth3346/elr-modal-alerts.svg?branch=master)](https://travis-ci.org/Beth3346/elr-modal-alerts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![codecov](https://codecov.io/gh/Beth3346/elr-modal-alerts/branch/master/graph/badge.svg)](https://codecov.io/gh/Beth3346/elr-modal-alerts)
+[![npm](https://img.shields.io/npm/dm/elr-modal-alerts.svg?style=flat)]()
 
 modal alerts
 
